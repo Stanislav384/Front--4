@@ -1,24 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Мій сайт </title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-<body>
-    <header>
-        
-      
-
-    </header>
-
-    <main>
-        <!-- КОНТЕНТ -->
-    </main>
-
-    <footer>
-        <!-- КОНТАКТНА ІНФОРМАЦІЯ -->
-    </footer>
-</body>
+<!DOCTYPE html><font></font>
+<!-- Created By CodingNepal - www.codingnepalweb.com --><font></font>
+<html lang="en" dir="ltr"><font></font>
+   <head><font></font>
+      <meta charset="utf-8"><font></font>
+      <title>Confirm Password Check | CodingNepal</title><font></font>
+      <link rel="stylesheet" href="style.css"><font></font>
+   </head><font></font>
+   <body><font></font>
+      <div class="container"><font></font>
+         <header>Confirm Password Check in <br>HTML CSS & JavaScript</header><font></font>
+         <form action="#"><font></font>
+            <div class="error-text"></div><font></font>
+            <div class="field"><font></font>
+               <input onkeyup="active()" id="pswrd_1" type="password" placeholder="Enter Password"><font></font>
+            </div><font></font>
+            <div class="field"><font></font>
+               <input onkeyup="active_2()" id="pswrd_2" disabled type="password" placeholder="Confirm Password"><font></font>
+               <div class="show"><font></font>
+                  SHOW<font></font>
+               </div><font></font>
+            </div><font></font>
+            <button disabled>Check</button><font></font>
+         </form><font></font>
+      </div><font></font>
+      <script><font></font>
+         const pswrd_1 = document.querySelector("#pswrd_1");<font></font>
+         const pswrd_2 = document.querySelector("#pswrd_2");<font></font>
+         const errorText = document.querySelector(".error-text");<font></font>
+         const showBtn = document.querySelector(".show");<font></font>
+         const btn = document.querySelector("button");<font></font>
+         function active(){<font></font>
+           if(pswrd_1.value.length >= 6){<font></font>
+             btn.removeAttribute("disabled", "");<font></font>
+             btn.classList.add("active");<font></font>
+             pswrd_2.removeAttribute("disabled", "");<font></font>
+           }else{<font></font>
+             btn.setAttribute("disabled", "");<font></font>
+             btn.classList.remove("active");<font></font>
+             pswrd_2.setAttribute("disabled", "");<font></font>
+           }<font></font>
+         }<font></font>
+         btn.onclick = function(){<font></font>
+           if(pswrd_1.value != pswrd_2.value){<font></font>
+             errorText.style.display = "block";<font></font>
+             errorText.classList.remove("matched");<font></font>
+             errorText.textContent = "Error! Confirm Password Not Match";<font></font>
+             return false;<font></font>
+           }else{<font></font>
+             errorText.style.display = "block";<font></font>
+             errorText.classList.add("matched");<font></font>
+             errorText.textContent = "Nice! Confirm Password Matched";<font></font>
+             return false;<font></font>
+           }<font></font>
+         }<font></font>
+         function active_2(){<font></font>
+           if(pswrd_2.value != ""){<font></font>
+             showBtn.style.display = "block";<font></font>
+             showBtn.onclick = function(){<font></font>
+               if((pswrd_1.type == "password") && (pswrd_2.type == "password")){<font></font>
+                 pswrd_1.type = "text";<font></font>
+                 pswrd_2.type = "text";<font></font>
+                 this.textContent = "Hide";<font></font>
+                 this.classList.add("active");<font></font>
+               }else{<font></font>
+                 pswrd_1.type = "password";<font></font>
+                 pswrd_2.type = "password";<font></font>
+                 this.textContent = "Show";<font></font>
+                 this.classList.remove("active");<font></font>
+               }<font></font>
+             }<font></font>
+           }else{<font></font>
+             showBtn.style.display = "none";<font></font>
+           }<font></font>
+         }<font></font>
+      </script><font></font>
+   </body><font></font>
 </html>
