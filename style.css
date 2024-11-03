@@ -1,105 +1,174 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');<font></font>
-*{<font></font>
-  margin: 0;<font></font>
-  padding: 0;<font></font>
-  box-sizing: border-box;<font></font>
-  font-family: 'Poppins', sans-serif;<font></font>
-}<font></font>
-html,body{<font></font>
-  display: grid;<font></font>
-  height: 100%;<font></font>
-  place-items: center;<font></font>
-  text-align: center;<font></font>
-  background: #f2f2f2;<font></font>
-}<font></font>
-.container{<font></font>
-  background: #fff;<font></font>
-  padding: 20px 30px;<font></font>
-  width: 420px;<font></font>
-  border-radius: 5px;<font></font>
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);<font></font>
-}<font></font>
-.container header{<font></font>
-  padding-top: 5px;<font></font>
-  font-size: 25px;<font></font>
-  font-weight: 600;<font></font>
-  line-height: 33px;<font></font>
-}<font></font>
-.container form{<font></font>
-  margin: 5px 8px;<font></font>
-}<font></font>
-.container form .error-text{<font></font>
-  background: #F8D7DA;<font></font>
-  padding: 8px 0;<font></font>
-  border-radius: 5px;<font></font>
-  color: #8B3E46;<font></font>
-  border: 1px solid #F5C6CB;<font></font>
-  display: none;<font></font>
-}<font></font>
-.container form .error-text.matched{<font></font>
-  background: #D4EDDA;<font></font>
-  color: #588C64;<font></font>
-  border-color: #C3E6CB;<font></font>
-}<font></font>
-.container form .field{<font></font>
-  width: 100%;<font></font>
-  height: 45px;<font></font>
-  display: flex;<font></font>
-  margin: 15px 0;<font></font>
-  position: relative;<font></font>
-}<font></font>
-form .field input{<font></font>
-  width: 100%;<font></font>
-  height: 100%;<font></font>
-  border: 1px solid lightgrey;<font></font>
-  padding-left: 15px;<font></font>
-  outline: none;<font></font>
-  border-radius: 5px;<font></font>
-  font-size: 17px;<font></font>
-  transition: all 0.3s;<font></font>
-}<font></font>
-form .field input::placeholder{<font></font>
-  font-size: 16px;<font></font>
-}<font></font>
-form .field input:focus{<font></font>
-  border-color: #27ae60;<font></font>
-  box-shadow: inset 0 0 3px #2fd072;<font></font>
-}<font></font>
-form .field .show{<font></font>
-  position: absolute;<font></font>
-  right: 10px;<font></font>
-  top: 50%;<font></font>
-  transform: translateY(-50%);<font></font>
-  font-size: 14px;<font></font>
-  font-weight: 600;<font></font>
-  user-select: none;<font></font>
-  cursor: pointer;<font></font>
-  display: none;<font></font>
-}<font></font>
-form .field .show.active{<font></font>
-  color: #27ae60;<font></font>
-}<font></font>
-form button{<font></font>
-  width: 100%;<font></font>
-  height: 45px;<font></font>
-  margin: 3px 0 10px 0;<font></font>
-  border: none;<font></font>
-  outline: none;<font></font>
-  background: #27ae60;<font></font>
-  border-radius: 5px;<font></font>
-  color: #fff;<font></font>
-  font-size: 18px;<font></font>
-  font-weight: 500;<font></font>
-  letter-spacing: 1px;<font></font>
-  text-transform: uppercase;<font></font>
-  cursor: no-drop;<font></font>
-  opacity: 0.7;<font></font>
-}<font></font>
-form button.active{<font></font>
-  cursor: pointer;<font></font>
-  opacity: 1;<font></font>
-  transition: all 0.3s;<font></font>
-}<font></font>
-form button.active:hover{<font></font>
-  background: #219150;<font></font>
-}/* ВАШІ СТИЛІ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+/* ВАШІ СТИЛІ */
+.header{
+  background-color: darkgray;
+  padding-left: 81px;
+  padding-right: 137px;
+  padding-top: 35px;
+  padding-bottom: 52px;
+}
+
+.header-nav {
+    width: 200x;
+      height: 27.88px;
+      flex-shrink: 0;
+      display: flex;
+      padding-left: 195px;
+      gap: 25px;
+      display: flex;
+        align-items: center;
+        justify-content: center;
+
+}
+
+.header-who {
+padding-left: 80px;
+display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.header-text {
+  padding-top: 11px;
+  padding-bottom: 11px;
+padding-left: 325px;
+padding-right: 178px;
+display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.who-sell {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.product-block {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 300px;
+  padding-top: 40px;
+
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.price {
+  font-weight: bold;
+  color: #f00;
+}
+
+.sells {
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+     .product {
+       text-align: center;
+       padding: 20px;
+       border: 1px solid #ccc;
+       border-radius: 5px;
+       background-color: #f9f9f9;
+     }
+  
+     .product img {
+       max-width: 100%;
+       height: auto;
+     }
+  
+     .product-title {
+       font-weight: bold;
+       margin-bottom: 10px;
+     }
+  
+     .product-price {
+       color: #666;
+     }
+
+
+.footer {
+background-color: #666;
+padding-top: 39px;
+padding-bottom: 11px;
+padding-right: 96px;
+padding-left: 96px;
+}
+
+.footer-list {
+display: flex;
+  gap: 50px;
+  flex-direction: row;
+  align-items: center;
+
+
+}
+
+.footer-box {
+}
+
+.footer-sells {
+color: #FFF;
+  font-family: JejuMyeongjo;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+width: 400px;
+  height: 71px;
+  flex-shrink: 0;
+  display: flex;
+  gap: 50px;
+}
